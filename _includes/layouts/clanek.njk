@@ -15,18 +15,18 @@ layout: layouts/hlavni-sablona.njk
 
 	<h1 class="article__title">{{ title }}</h1>
 
-	<p class="article__meta">Publikováno {{ page.date }}</p>
+	<p class="article__meta">Publikováno {{ page.date.toLocaleString('cs-CZ') }}</p>
 	<div class="article__content">
 
 		<div class="article__text">
 
-			<p class="article__perex">tady bude perex</p>
+			<p class="article__perex">{{ perex }}</p>
 
             {{ content | safe}}
 
 		</div>
 
-		<img class="article__image" src="/images/astronaut.jpg" alt="Astronaut na cizí planetě">
+		<img class="article__image" src="/images/{{ foto }}" alt="{{ alt }}">
 
 	</div>
 
